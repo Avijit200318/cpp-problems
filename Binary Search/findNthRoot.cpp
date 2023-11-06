@@ -35,14 +35,20 @@ using namespace std;
 class Solution
 {
     public:
-    int multiplierFunction(int i , int n)
+    int multiplierFunction(int mid , int n, int m)
     {
         int ans = 1;
         for(int j = 0; j < n; j++)
         {
-            ans = ans * i;
+            ans = ans * mid;
+            if(ans > m)
+            {
+                return 2;
+            }
+            if(ans == m)
+                return 1;
         }
-        return ans;
+        return 0;
     }
     int findNthRoot(int n, int m)
     {
@@ -50,16 +56,16 @@ class Solution
         while(low <= high)
         {
             int mid = (low + high)/2;
-            if(multiplierFunction(mid, n) == m)
+            if(multiplierFunction(mid, n, m) == 1)
             {
                 return mid;
             }
-            else if(multiplierFunction(mid, n) > m)
+            else if(multiplierFunction(mid, n, m) == 0)
             {
-                high = mid - 1;
+                low = mid + 1;
             }
             else{
-                low = mid + 1;
+                high = mid - 1;
             }
         }
         return -1;
