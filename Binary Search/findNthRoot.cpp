@@ -45,9 +45,9 @@ class Solution
             {
                 return 2;
             }
-            if(ans == m)
-                return 1;
         }
+        if(ans == m)
+            return 1;
         return 0;
     }
     int findNthRoot(int n, int m)
