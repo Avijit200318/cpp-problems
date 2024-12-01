@@ -1,5 +1,3 @@
-// maximum subarray sum of a circular array
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -87,6 +85,7 @@ public:
         // cout<<maxi<<endl;
         
         // to handle all the -ve element we need to add this line where we check maximum sub array sum with circular sub array sum.
+        if(normalSum == minSum) return maxi;
         return max( maxi,normalSum - minSum);
     }
 };
@@ -103,7 +102,7 @@ int main()
     // vector<int> arr = {-1, -2, -3};
     // -1
 
-    vector<int> arr = {-7, 32, -11, 21, 18, 35, -26, -17, 35, -12, -38, -33, 32, 16, 44, 11, -40, -21, 2, 27, -35, 21, -37, -12, 1};
+    // vector<int> arr = {-7, 32, -11, 21, 18, 35, -26, -17, 35, -12, -38, -33, 32, 16, 44, 11, -40, -21, 2, 27, -35, 21, -37, -12, 1};
     // 107
 
     int a = s.circularSubarraySum(arr);
