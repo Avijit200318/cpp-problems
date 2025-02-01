@@ -9,7 +9,7 @@
 
 class Solution {
   public:
-  bool check(int i, int j, int idx, vector<vector<char>> mat, string word, vector<vector<int>> &visited){
+  bool check(int i, int j, int idx, vector<vector<char>> &mat, string &word, vector<vector<int>> &visited){
     if(idx == word.size()){
         return true;
     }
