@@ -69,6 +69,7 @@ class Solution{
                 n* temp = q.front();
                 q.pop();
                 levelValues.push_back(temp->info);
+                //------------if instead of left and right only child given-------------------
                 if(temp->lc != NULL)
                 {
                     q.push(temp->lc);
@@ -77,6 +78,8 @@ class Solution{
                 {
                     q.push(temp->rc);
                 }
+
+                //--------change only this portion to the bellow portion--------------
             }
             ans.push_back(levelValues);
         }
@@ -109,3 +112,12 @@ int main()
     }
     return 0;
 }
+
+
+
+//instead of left and right if given then we just need to add this line where we use left and right child
+// for(Node* child : temp->children) {
+//     if(child != nullptr) {
+//         q.push(child);
+//     }
+// }
