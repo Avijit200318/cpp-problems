@@ -79,7 +79,9 @@ class Solution{
             cout<<lps[i]<<" ";
         }
         cout<<endl;
+        // -----change from this line if you want to print the palindrom string that will create after inserting---------
         return n - lps[lps.size()-1];
+        // --------------scroll bellow to find the code ----------------
     }
 };
 
@@ -91,3 +93,15 @@ int main(){
     cout<<"The answer is : "<<a;
     return 0;
 }
+
+
+     // add this lines ------------------- to the comment poisition to get the plindrom string after insertion
+        // int needed = lps[lps.size()-1];
+
+        // string ans = "";
+        // for(int i = n-1; i>= needed; i--){
+        //     ans += s[i];
+        // }
+        // return ans+s;
+
+// ----------------------------------------
