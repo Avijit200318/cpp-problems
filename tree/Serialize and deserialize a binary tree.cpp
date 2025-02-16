@@ -58,9 +58,80 @@ class Solution {
         }
         return root;
     }
-
+};
 
 // ***********************Leetcode using string instead of array ********************
 
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+
+// stringstream help to travarse it like an object since we add ',' to seperate every element. and getinline() takes three thing one is stringstream variable, string and a seperator(',').
+// getinline help to traverse to next element
+class Codec {
+public:
+
+    // Encodes a tree to a single string.
+    string serialize(TreeNode* root) {
+        if(root == nullptr) return "";
+
+        string s = "";
+        queue<TreeNode*> q;
+        q.push(root);
+
+        while(!q.empty()){
+            TreeNode* temp = q.front();
+            q.pop();
+
+            if(temp == nullptr){
+                s.append("#,");
+            }
+            else{
+                s.append(to_string(temp->val) + ',');
+                q.push(temp->left);
+                q.push(temp->right);
+            }
+        }
+        return s;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        int n = data.size();
+        if(n == 0) return nullptr;
+
+        string str;
+        stringstream s(data);
+        getline(s, str, ',');
+        queue<TreeNode*> q;
+        TreeNode* root = new TreeNode(stoi(str));
+        q.push(root);
+
+        while(!q.empty()){
+            TreeNode* temp = q.front();
+            q.pop();
+
+            getline(s, str, ',');
+            if(str != "#"){
+                temp->left = new TreeNode(stoi(str));
+                q.push(temp->left);
+            }
+            getline(s, str, ',');
+
+            if(str != "#"){
+                temp->right = new TreeNode(stoi(str));
+                q.push(temp->right);
+            }
+            
+        }
+        return root;
+    }
 };
+
