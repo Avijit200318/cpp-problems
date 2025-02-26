@@ -35,3 +35,43 @@ public:
         return count;
     }
 };
+
+
+
+// *******************GFG Problem************************
+// Longest Consecutive 1's
+// Input: N = 14
+// Output: 3
+// Explanation: 
+// Binary representation of 14 is 
+// 1110, in which 111 is the longest 
+// consecutive set bits of length is 3.
+
+
+// Input: N = 222
+// Output: 4
+// Explanation: 
+// Binary representation of 222 is 
+// 11011110, in which 1111 is the 
+// longest consecutive set bits of length 4. 
+
+class Solution
+{
+    public:
+    int maxConsecutiveOnes(int N)
+    {
+        int maxVal = 0, count = 0;
+        while(N){
+            int bit = N & 1;
+            if(bit == 1){
+                count++;
+                maxVal = max(maxVal, count);
+            }
+            else{
+                count = 0;
+            }
+            N = N>>1;
+        }
+        return maxVal;
+    }
+};
