@@ -27,19 +27,20 @@ class Solution {
 public:
     int findLUSlength(string a, string b) {
         int n = a.size(), m = b.size();
-        int i = 0, j = 0;
-        int count = 0;
-        int maxCount = 0;
+        // int i = 0, j = 0;
+        // int count = 0;
 
-        while(i < n && j < m){
-            if(a[i] == b[j]){
-                count++;
-            }
-            i++;
-            j++;
-        }
+        // while(i < n && j < m){
+        //     if(a[i] == b[j]){
+        //         count++;
+        //     }
+        //     i++;
+        //     j++;
+        // }
 
-        if(n == m && n == count) return -1;
+        // if(n == m && n == count) return -1;
+
+        if(a == b) return -1;
 
         return max(n, m);
     }
