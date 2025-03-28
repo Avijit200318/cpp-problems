@@ -15,11 +15,51 @@
 // Given n and k, return the kth permutation sequence.
 
 
-Example 1:
+// Example 1:
 
-Input: n = 3, k = 3
-Output: "213"
+// Input: n = 3, k = 3
+// Output: "213"
 
+// *********brueforce solution**********
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(int idx, int n, string &arr, vector<string> &ans){
+    if(idx == n){
+        ans.push_back(arr);
+        return;
+    }
+
+    for(int i = idx; i< n; i++){
+        swap(arr[idx], arr[i]);
+        solve(idx+1, n, arr, ans);
+        swap(arr[idx], arr[i]);
+    }
+}
+
+string kthPermutation(int n, int k){
+    string arr;
+    for(int i = 1; i<= n; i++){
+        arr.push_back(i + '0');
+    }
+
+    vector<string> ans;
+    solve(0, n, arr, ans);
+
+    return ans[k-1];
+}
+
+int main(){
+    string a = kthPermutation(3, 3);
+    cout<<"the answer is: "<<a;
+    return 0;
+}
+
+
+// this will take almost time o(n!)
+
+
+// this one is optimal solution
 class Solution {
 public:
     string getPermutation(int n, int k) {
