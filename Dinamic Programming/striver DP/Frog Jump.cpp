@@ -31,3 +31,31 @@ int frogJump(int n, vector<int> &heights)
     vector<int> memo(n+1, -1);
     return solve(n-1, memo, heights);
 }
+
+// this will take an extra space complexity o(n)
+
+// *******tabulization form**********
+
+#include <bits/stdc++.h> 
+
+int frogJump(int n, vector<int> &heights)
+{
+    if(n == 0) return 0;
+    
+    vector<int> memo(n+1, -1);
+    memo[0] = 0;
+
+
+    for(int i = 1; i< n; i++){
+        int left = memo[i-1] + abs(heights[i] - heights[i-1]);
+        int right = INT_MAX;
+
+        if(i > 1){
+            right = memo[i-2] + abs(heights[i] - heights[i-2]);
+        }
+        memo[i] = min(left, right);
+    }
+    return memo[n-1];
+}
+
+
