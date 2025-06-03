@@ -37,7 +37,7 @@ class Solution{
         int mid = (low + high)/2;
 
         mergeSort(arr, low, mid);
-        mergeSort(arr, high, mid);
+        mergeSort(arr, mid+1, high);
 
         merge(arr, low, mid, high);
     }
@@ -49,7 +49,7 @@ int main(){
     // vector<int> arr = {1, 5, 3, 2, 4};
     vector<int> arr = {5, 2, 1};
     int n = arr.size();
-    s.mergeSort(arr,0, n);
+    s.mergeSort(arr,0, n-1);
     cout<<"The answer is: ";
     for(int i = 0; i< n; i++){
         cout<<arr[i]<<" ";
