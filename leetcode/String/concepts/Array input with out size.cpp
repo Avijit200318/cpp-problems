@@ -1,71 +1,60 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Solution{
-    public:
-    vector<int> stringToArray(string s){
-        vector<int> ans;
+int main() {
+    // Write C++ code here
+    cout<<"write something"<<endl;
+    string s;
 
-        // string s;
-        // getline(cin, s)
-        // if we need to get the string using cin then we can just write the above two line.
-        stringstream ss(s);
+    getline(cin, s);
+    stringstream ss(s);
+    
 
-        string s1;
+    vector<int> arr;
+    int num;
 
-        while(getline(ss, s1, ',')){
-            int num = stoi(s1);
-            ans.push_back(num);
-        }
-        return ans;
+    while(ss >> num){
+        arr.push_back(num);
     }
 
-    vector<int> stringtoArraySpaceSeparated(string s){
-        // string s;
-        // getline(cin, s)
-        // if we need to get the string using cin then we can just write the above two line.
-        vector<int> ans;
-
-        stringstream ss(s);
-        string s1 = "";
-
-        // this seperate any space ' ' or '        ' is just give us the next value
-        while(ss >> s1){
-            int num = stoi(s1);
-            ans.push_back(num);
-        }
-
-        return ans;
+    cout<<"array output is ";
+    for(int i = 0; i< arr.size(); i++){
+        cout<< arr[i]<<" ";
     }
 
-    vector<int> stringtoArraySpaceSeparatedUseingGetline(string s){
-        // string s;
-        // getline(cin, s)
-        // if we need to get the string using cin then we can just write the above two line.
-        vector<int> ans;
+    return 0;
+}
 
-        stringstream ss(s);
-        string s1 = "";
 
-        // this only seperate single space ' ' not double
-        while(getline(ss, s1, ' ')){
-            int num = stoi(s1);
-            ans.push_back(num);
-        }
 
-        return ans;
+
+// if coma separeted values
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    cout<<"write something"<<endl;
+    cout<<"In case of coma separeted values: 1,2,3,4"<<endl;
+    string s;
+
+    getline(cin, s);
+    stringstream ss(s);
+
+    vector<int> arr;
+    // int num;
+    string temp;
+
+    while(getline(ss, temp, ',')){
+        int num = stoi(temp);
+        arr.push_back(num);
     }
-};
 
-
-int main(){
-    Solution s;
-    // vector<int> a = s.stringToArray("1,2,3,4,5");
-    // vector<int> a = s.stringtoArraySpaceSeparated("1 2             3 4 5");
-    vector<int> a = s.stringtoArraySpaceSeparatedUseingGetline("1 2 3 4 5");
-    cout<<"The answer is: "<<endl;
-    for(int i = 0; i< a.size(); i++){
-        cout<<a[i]<<" ";
+    cout<<"array output is ";
+    for(int i = 0; i< arr.size(); i++){
+        cout<< arr[i]<<" ";
     }
+
     return 0;
 }
