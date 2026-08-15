@@ -58,3 +58,40 @@ int main() {
 
     return 0;
 }
+
+
+// if the inputs are [1,2,3,4]
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    cout << "if the array is given in this format [1,2,3,4]"<<endl;
+    
+    string s;
+    getline(cin, s);
+    int n = s.size();
+
+    if(s[0] == '[' && s[n-1] == ']'){
+        s = s.substr(1, n-2); 
+        // 1 to n-1 index will consider the last index also considered
+    }
+
+    stringstream ss(s);
+
+    string temp;
+    vector<int> arr;
+
+    while(getline(ss, temp, ',')){
+        int num = stoi(temp);
+        arr.push_back(num);
+    }
+
+
+    for(int i = 0; i< arr.size(); i++){
+        cout<< arr[i]<<" ";
+    }
+
+    return 0;
+}
