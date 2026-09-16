@@ -1,0 +1,24 @@
+https://leetcode.com/discuss/post/8444355/sliding-window-patterns-complete-revisio-yhus/
+
+pattern 1:
+LC 643 — Maximum Average Subarray I
+LC 1343 — Number of Sub-arrays of Size K
+LC 2461 — Maximum Sum of Distinct Subarrays With Length K
+
+pattern 2:
+LC 438 — Find All Anagrams in a String
+LC 567 — Permutation in String
+LC 2461 — Maximum Sum of Distinct Subarrays With Length K
+
+pattern 3:
+LC 239 — Sliding Window Maximum
+
+pattern 4:
+LC 3 — Longest Substring Without Repeating Characters
+
+pattern 5:
+LC 904 — Fruit Into Baskets
+LC 340 — Longest Substring with At Most K Distinct Characters
+LC 1004 — Max Consecutive Ones III
+LC 424 — Longest Repeating Character Replacement
+
