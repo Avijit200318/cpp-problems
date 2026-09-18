@@ -1,24 +1,46 @@
 https://leetcode.com/discuss/post/8444355/sliding-window-patterns-complete-revisio-yhus/
 
-pattern 1:
+pattern 1: — Fixed Window: Maximum / Minimum
 LC 643 — Maximum Average Subarray I
 LC 1343 — Number of Sub-arrays of Size K
 LC 2461 — Maximum Sum of Distinct Subarrays With Length K
 
-pattern 2:
+pattern 2:  — Fixed Window + Frequency Map
 LC 438 — Find All Anagrams in a String
 LC 567 — Permutation in String
 LC 2461 — Maximum Sum of Distinct Subarrays With Length K
 
-pattern 3:
+pattern 3:  — Fixed Window + Deque
 LC 239 — Sliding Window Maximum
 
-pattern 4:
+pattern 4: — Longest Valid Window
 LC 3 — Longest Substring Without Repeating Characters
 
-pattern 5:
+pattern 5: — Longest Window With At Most K
 LC 904 — Fruit Into Baskets
 LC 340 — Longest Substring with At Most K Distinct Characters
 LC 1004 — Max Consecutive Ones III
 LC 424 — Longest Repeating Character Replacement
+
+pattern 6: — Longest Window With At Most K Zeros / Bad Elements
+LC 1004 — Max Consecutive Ones III
+
+pattern 7: — Longest Window With No Duplicate
+LC 3 — Longest Substring Without Repeating Characters
+
+PATTERN 9 — Longest Window With Sum/Product Constraint
+LC 713 — Subarray Product Less Than K
+
+pattern 10 - Exactly K → At Most K − At Most K−1
+LC 992 — Subarrays with K Different Integers
+
+ PATTERN 11 — Minimum Valid Window
+ LC 76 — Minimum Window Substring
+
+PATTERN 12 — Count All Valid Subarrays
+LC 713 — Subarray Product Less Than K
+LC 2302 — Count Subarrays With Score Less Than K
+
+PATTERN 13 — Count Subarrays With At Least K / All Required
+LC 1358 — Number of Substrings Containing All Three Characters
 
