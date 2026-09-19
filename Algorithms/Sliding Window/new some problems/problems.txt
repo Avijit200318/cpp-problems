@@ -33,6 +33,7 @@ LC 713 — Subarray Product Less Than K
 
 pattern 10 - Exactly K → At Most K − At Most K−1
 LC 992 — Subarrays with K Different Integers
+Count Number of Nice Subarrays
 
  PATTERN 11 — Minimum Valid Window
  LC 76 — Minimum Window Substring
@@ -44,3 +45,8 @@ LC 2302 — Count Subarrays With Score Less Than K
 PATTERN 13 — Count Subarrays With At Least K / All Required
 LC 1358 — Number of Substrings Containing All Three Characters
 
+PATTERN 14 — Monotonic Queue Window
+LC 1438 — Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+
+PATTERN 15 — Complement / Inverse Sliding Window
+LC 1423 — Maximum Points You Can Obtain from Cards
