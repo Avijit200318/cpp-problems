@@ -5,6 +5,10 @@ LC 643 — Maximum Average Subarray I
 LC 1343 — Number of Sub-arrays of Size K
 LC 2461 — Maximum Sum of Distinct Subarrays With Length K
 
+LC 2461 — Maximum Sum of Distinct Subarrays With Length K
+LC 2090 — K Radius Subarray Averages
+LC 438 — Find All Anagrams
+
 pattern 2:  — Fixed Window + Frequency Map
 LC 438 — Find All Anagrams in a String
 LC 567 — Permutation in String
@@ -21,6 +25,8 @@ LC 904 — Fruit Into Baskets
 LC 340 — Longest Substring with At Most K Distinct Characters
 LC 1004 — Max Consecutive Ones III
 LC 424 — Longest Repeating Character Replacement
+LC 2024. Maximize the Confusion of an Exam
+LC 2958. Length of Longest Subarray With at Most K Frequency
 
 pattern 6: — Longest Window With At Most K Zeros / Bad Elements
 LC 1004 — Max Consecutive Ones III
@@ -34,6 +40,7 @@ LC 713 — Subarray Product Less Than K
 pattern 10 - Exactly K → At Most K − At Most K−1
 LC 992 — Subarrays with K Different Integers
 Count Number of Nice Subarrays
+LC 930 — Binary Subarrays With Sum
 
  PATTERN 11 — Minimum Valid Window
  LC 76 — Minimum Window Substring
@@ -50,3 +57,25 @@ LC 1438 — Longest Continuous Subarray With Absolute Diff Less Than or Equal to
 
 PATTERN 15 — Complement / Inverse Sliding Window
 LC 1423 — Maximum Points You Can Obtain from Cards
+
+------------------
+
+### 3. Variable Window — Shortest / Minimum
+* LC 209 — Minimum Size Subarray Sum
+
+### 10. Prefix Sum + HashMap
+* LC 523 — Continuous Subarray Sum
+* LC 325 — Maximum Size Subarray Sum Equals K
+
+### 12. Two Pointers
+* LC 11 — Container With Most Water
+* LC 26 — Remove Duplicates from Sorted Array
+* LC 283 — Move Zeroes
+* LC 75 — Sort Colors
+
+### 13. Circular Sliding Window
+* LC 1652 — Defuse the Bomb
+* LC 918 — Maximum Sum Circular Subarray
+
+### 14. Bitmask Window  
+* LC 2401 — Longest Nice Subarray
