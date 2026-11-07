@@ -55,3 +55,43 @@ class Solution {
         return dis;
     }
 };
+
+
+// ***Dijkstra Algorithm using set
+class Solution {
+  public:
+    vector<int> dijkstra(vector<vector<vector<int>>> &adj, int src) {
+        int n = adj.size();
+        set<pair<int, int>> st;
+        vector<int> dis(n, INT_MAX);
+        
+        dis[src] = 0;
+        st.insert({0, src});
+        
+        while(!st.empty()){
+            auto firstEle = *(st.begin());
+            int node = firstEle.second;
+            int weight = firstEle.first;
+            st.erase(firstEle);
+            
+            // condition to optimize
+            if(weight > dis[node]) continue;
+            
+            for(auto it : adj[node]){
+                int adjNode = it[0];
+                int w = it[1];
+                
+                if(w + weight < dis[adjNode]){
+                    // first delete the value from the set it distance not INT_max
+                    if(dis[adjNode] != INT_MAX){
+                        st.erase({dis[adjNode], adjNode});
+                    }
+                    
+                    dis[adjNode] = w + weight;
+                    st.insert({w + weight, adjNode});
+                }
+            }
+        }
+        return dis;
+    }
+};
